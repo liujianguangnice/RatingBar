@@ -1,0 +1,43 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    apply from: 'versions.gradle'
+    addRepos(repositories)
+
+
+    dependencies {
+        classpath build_gradle.build
+        
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+    repositories {
+        google()
+    }
+}
+
+allprojects {
+    addRepos(repositories)
+    /*跳过Test单元测试*/
+    gradle.taskGraph.whenReady {
+        tasks.each { task ->
+            if (task.name.contains("Test") || task.name.contains("mockableAndroidJar")
+                    || task.name.contains("Lint")
+                    || task.name.contains("Aidl")
+                    || task.name.contains("Ndk")
+                    || task.name.contains("Jni")) {
+                task.enabled = false
+            }
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+repositories {
+    google()
+}
