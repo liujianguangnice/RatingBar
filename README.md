@@ -24,7 +24,7 @@ dependencies {
 ```
 
 #### 2、效果展示
-![点我查看效果图](https://github.com/liujianguangnice/RatingBar/blob/master/screenshot/tste_20181206175419?raw=true)
+![点我查看效果图](https://github.com/liujianguangnice/RatingBar/blob/master/screenshot/tste_20181206175419.png?raw=true)
 
 #### 3、核心代码
 
