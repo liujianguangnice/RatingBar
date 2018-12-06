@@ -24,7 +24,7 @@ dependencies {
 ```
 
 #### 2、效果展示
-![点我查看效果图](https://github.com/Victory-Over/Resource/blob/master/file_chartview.gif?raw=true)
+![点我查看效果图](https://github.com/liujianguangnice/RatingBar/blob/master/screenshot/device-2018-12-06-174323.png?raw=true)
 
 #### 3、核心代码
 
