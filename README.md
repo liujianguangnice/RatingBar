@@ -28,6 +28,22 @@ dependencies {
 
 #### 3、核心代码
 
+  <com.ljg.ratingbar.RatingBar
+            android:id="@+id/star_have_click_half"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView"
+            app:starCount="5"
+            app:starEmpty="@drawable/rating_small_empty"
+            app:starFill="@drawable/rating_small_full"
+            app:starHalf="@drawable/rating_small_half"
+            app:starImageSize="16dp"
+            app:starPadding="4dp"
+            app:starStep="3.5"
+            app:stepSize="Half" />
+
+
 public class RatingBar extends LinearLayout {
 
     /**
