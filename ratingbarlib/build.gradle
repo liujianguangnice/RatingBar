@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 
+apply from: './jitpack-push.gradle'
+
 android {
     compileSdkVersion build_versions.target_sdk
     buildToolsVersion build_versions.build_tools
@@ -34,7 +36,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
-apply from: './github-push.gradle'
 
-//如果往中央仓库打可以使用这个脚本
+
+//如果往github仓库打可以使用这个脚本
+//apply from: './github-push.gradle'
+
+//如果往私人中央仓库打可以使用这个脚本
 //apply from: './nexus-push.gradle'
