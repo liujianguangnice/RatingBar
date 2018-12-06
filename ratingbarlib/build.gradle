@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
 
+//如果往jitpack仓库打可以使用这个脚本
 apply from: './jitpack-push.gradle'
 
 android {

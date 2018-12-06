@@ -50,7 +50,7 @@ build_url.url = "http://api.fanneng.com"
 ext.build_url = build_url
 
 static def addRepos(RepositoryHandler handler) {
-    handler.maven { url "https://raw.githubusercontent.com/liujianguangnice/RatingBar/master" }
+    //handler.maven { url "https://raw.githubusercontent.com/liujianguangnice/RatingBar/master" }
     handler.maven { url "http://maven.enncloud.cn/content/repositories/releases/" }
 
     handler.maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
