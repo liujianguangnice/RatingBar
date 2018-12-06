@@ -28,7 +28,140 @@ dependencies {
 
 #### 3、核心代码
 
-  <com.ljg.ratingbar.RatingBar
+
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="15dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:text="星级"
+            android:textSize="12dp" />
+
+        <!--上面RatingBar属性设置代码是使用的关键 对星星数量，大小，位置，星星样式，间距，默认星级等均做了设置-->
+
+        <com.ljg.ratingbar.RatingBar
+            android:id="@+id/star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView"
+            app:clickable="false"
+            app:starCount="5"
+            app:starEmpty="@drawable/rating_small_empty"
+            app:starFill="@drawable/rating_small_full"
+            app:starHalf="@drawable/rating_small_half"
+            app:starImageSize="16dp"
+            app:starPadding="4dp"
+            app:starStep="2.5"
+            app:stepSize="Half" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:text="带点击事件的星级"
+            android:textSize="12dp" />
+
+        <!--上面RatingBar属性设置代码是使用的关键 对星星数量，大小，位置，星星样式，间距，默认星级等均做了设置-->
+
+        <com.ljg.ratingbar.RatingBar
+            android:id="@+id/star_have_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView"
+            app:starCount="5"
+            app:starEmpty="@drawable/rating_small_empty"
+            app:starFill="@drawable/rating_small_full"
+            app:starHalf="@drawable/rating_small_half"
+            app:starImageSize="16dp"
+            app:starPadding="4dp"
+            app:starStep="2.5"
+            app:stepSize="Half" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:text="点击增加或删除整个星星"
+            android:textSize="10dp" />
+
+        <!--上面RatingBar属性设置代码是使用的关键 对星星数量，大小，位置，星星样式，间距，默认星级等均做了设置-->
+
+        <com.ljg.ratingbar.RatingBar
+            android:id="@+id/star_have_click_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView"
+            app:starCount="5"
+            app:starEmpty="@drawable/rating_small_empty"
+            app:starFill="@drawable/rating_small_full"
+            app:starHalf="@drawable/rating_small_half"
+            app:starImageSize="16dp"
+            app:starPadding="4dp"
+            app:starStep="2.5"
+            app:stepSize="Full" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:text="点击增加或删除半个星星"
+            android:textSize="10dp" />
+
+        <!--上面RatingBar属性设置代码是使用的关键 对星星数量，大小，位置，星星样式，间距，默认星级等均做了设置-->
+
+        <com.ljg.ratingbar.RatingBar
             android:id="@+id/star_have_click_half"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -42,6 +175,40 @@ dependencies {
             app:starPadding="4dp"
             app:starStep="3.5"
             app:stepSize="Half" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:gravity="left"
+            android:text="设置星星间距"
+            android:textSize="10dp" />
+
+        <!--上面RatingBar属性设置代码是使用的关键 对星星数量，大小，位置，星星样式，间距，默认星级等均做了设置-->
+
+        <com.ljg.ratingbar.RatingBar
+            android:id="@+id/star_have_click_pading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/textView"
+            app:starCount="5"
+            app:starImageSize="16dp"
+            app:starPadding="20dp"
+            app:starStep="3.5"
+            app:stepSize="Half" />
+
+    </LinearLayout>
+</LinearLayout>
 
 
 public class RatingBar extends LinearLayout {
