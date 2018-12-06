@@ -1,14 +1,13 @@
-package com.ljg.ratingbar.custom;
+package com.ljg.ratingbar;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
-import com.ljg.ratingbar.customratingbar.R;
 
 import java.math.BigDecimal;
 
@@ -115,9 +114,10 @@ public class RatingBar extends LinearLayout {
         starStep = mTypedArray.getFloat(R.styleable.RatingBar_starStep, 1.0f);
         stepSize = StepSize.fromStep(mTypedArray.getInt(R.styleable.RatingBar_stepSize, 1));
         starCount = mTypedArray.getInteger(R.styleable.RatingBar_starCount, 5);
-        starEmptyDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starEmpty);
-        starFillDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starFill);
-        starHalfDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starHalf);
+        Log.i("TAG", "RatingBar: RatingBar_starEmpty="+ mTypedArray.getDrawable(R.styleable.RatingBar_starEmpty));
+        starEmptyDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starEmpty)==null?getResources().getDrawable(R.drawable.rating_small_empty):mTypedArray.getDrawable(R.styleable.RatingBar_starEmpty);
+        starFillDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starFill)==null?getResources().getDrawable(R.drawable.rating_small_full):mTypedArray.getDrawable(R.styleable.RatingBar_starFill);
+        starHalfDrawable = mTypedArray.getDrawable(R.styleable.RatingBar_starHalf)==null?getResources().getDrawable(R.drawable.rating_small_half):mTypedArray.getDrawable(R.styleable.RatingBar_starHalf);
         mClickable = mTypedArray.getBoolean(R.styleable.RatingBar_clickable, true);
         mTypedArray.recycle();
         for (int i = 0; i < starCount; ++i) {

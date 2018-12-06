@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="RatingBars">
+    <declare-styleable name="RatingBar">
         <!--尺寸值-->
         <attr name="starImageSize" format="dimension" />
         <!--星星间距-->

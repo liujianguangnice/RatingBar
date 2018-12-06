@@ -1,14 +1,15 @@
-package com.ljg.ratingbar.customratingbar;
+package com.ljg.ratingbar;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
-import com.ljg.ratingbar.custom.RatingBar;
+import com.ljg.ratingbar.custom.RatingBars;
+import com.ljg.ratingbar.customratingbar.R;
 
 public class MainActivity extends AppCompatActivity {
-    private RatingBar mRatingBar;
-    private RatingBar star_have_click;
+    private RatingBars mRatingBars;
+    private RatingBars star_have_click;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,14 +21,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
 
-        mRatingBar = (RatingBar) findViewById(R.id.star);
-        star_have_click = (RatingBar) findViewById(R.id.star_have_click);
+        mRatingBars = (RatingBars) findViewById(R.id.star);
+        star_have_click = (RatingBars) findViewById(R.id.star_have_click);
     }
 
     private void initData() {
         // mRatingBar.setClickable(false);
 
-        star_have_click.setOnRatingChangeListener(new RatingBar.OnRatingChangeListener() {
+        star_have_click.setOnRatingChangeListener(new RatingBars.OnRatingChangeListener() {
             @Override
             public void onRatingChange(float ratingCount) {
                 Toast.makeText(getApplicationContext(), ratingCount + "", Toast.LENGTH_SHORT).show();
